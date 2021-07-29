@@ -1,6 +1,6 @@
 package com.epam.training.den;
 
-public class Evclid {
+public class Euclid {
 	public static long get(long a, long b) {
 		long bu = 0;
 		long x = a < b ? a : b;
@@ -22,13 +22,13 @@ public class Evclid {
 		return x;
 	}
 
-	public static long getDen(Array ar) {
-		if (ar.size() < 2)
+	public static long getDen(long ar[]) {
+		if (ar.length < 2)
 			return 0;
-		long a = ar.getByIndex(1).den;
+		long a = ar[0];
 		long b = 1;
-		for (int i = 0; i < ar.size(); i++) {
-			b = ar.getByIndex(i).den;
+		for (int i = 1; i < ar.length; i++) {
+			b = ar[i];
 			while ((a != 0) && (b != 0)) {
 				if (a > b) {
 					a = a % b;
